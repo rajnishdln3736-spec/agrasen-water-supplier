@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrasen Water Supplier | Pure & Packaged Mineral Water Delivery in Chandauli</title>
+  
+  <!-- SEO & Social Sharing Metadata -->
+  <meta name="description" content="Agrasen Water Supplier (Satish Agrawal) - 1L, 500ml & 250ml Mineral Water bottles for Home, Office, Weddings & Events in Chandauli. Fastest Doorstep Delivery.">
+  <meta property="og:title" content="Agrasen Water Supplier - Chandauli">
+  <meta property="og:description" content="Order Event & Party Pack Mineral Water Bottles in 1-Click via WhatsApp. Fast Delivery in Chandauli (Purani Bazar).">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ===================================================================
+       Agrasen Water Supplier - Embedded Complete Design System
+       =================================================================== */
+    :root {
+      --primary-blue: #0284c7;
+      --primary-dark: #0369a1;
+      --accent-cyan: #06b6d4;
+      --accent-light: #e0f2fe;
+      --accent-green: #25d366;
+      --accent-green-dark: #1da851;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --bg-main: #f8fafc;
+      --card-bg: #ffffff;
+      --border-light: rgba(226, 232, 240, 0.8);
+      --shadow-sm: 0 2px 8px rgba(2, 132, 199, 0.06);
+      --shadow-md: 0 10px 25px -5px rgba(2, 132, 199, 0.12);
+      --shadow-lg: 0 20px 35px -10px rgba(2, 132, 199, 0.18);
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+      padding-bottom: 80px;
+    }
+
+    .bg-glow {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      z-index: -1;
+      opacity: 0.45;
+      pointer-events: none;
+    }
+    .glow-1 {
+      width: 380px;
+      height: 380px;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .glow-2 {
+      width: 320px;
+      height: 320px;
+      background: linear-gradient(135deg, #22d3ee, #34d399);
+      bottom: 100px;
+      right: -50px;
+    }
+
+    .page-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 16px 14px 40px;
+    }
+
+    /* Top Announcement Banner */
+    .promo-top-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #e0f2fe, #f0fdf4);
+      border: 1px solid #bae6fd;
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+      color: var(--text-dark);
+    }
+    .live-dot {
+      width: 10px;
+      height: 10px;
+      background-color: #22c55e;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+      animation: pulseDot 2s infinite;
+    }
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+    }
+
+    /* Profile Card (Hero) */
+    .profile-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-light);
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .profile-badge-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .tag-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .verified-tag {
+      background-color: #e0f2fe;
+      color: var(--primary-dark);
+    }
+    .location-tag {
+      background-color: #fef3c7;
+      color: #92400e;
+    }
+
+    .brand-avatar-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+    .avatar-ring {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--primary-blue));
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.25);
+    }
+    .brand-avatar {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: var(--primary-blue);
+    }
+    .online-indicator {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      width: 16px;
+      height: 16px;
+      background: #22c55e;
+      border: 3px solid #ffffff;
+      border-radius: 50%;
+    }
+
+    .brand-name {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+    .proprietor-title {
+      font-size: 1rem;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+    .address-text {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .brand-tagline {
+      font-size: 0.92rem;
+      color: #475569;
+      background: #f1f5f9;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 22px;
+    }
+
+    /* Action Buttons Grid */
+    .action-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-call {
+      background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+      text-align: left;
+    }
+    .btn-call small {
+      font-size: 0.72rem;
+      opacity: 0.85;
+      display: block;
+    }
+    .btn-whatsapp {
+      background: linear-gradient(135deg, var(--accent-green), var(--accent-green-dark));
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      text-align: left;
+    }
+    .btn-whatsapp small {
+      font-size: 0.72rem;
+      opacity: 0.85;
+      display: block;
+    }
+    .btn-secondary {
+      background: #ffffff;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Trust USPs Section */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .trust-pill {
+      background: var(--card-bg);
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .trust-pill i {
+      font-size: 1.4rem;
+      color: var(--primary-blue);
+      flex-shrink: 0;
+    }
+    .trust-pill h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .trust-pill p {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* Catalog & Products Section */
+    .catalog-section {
+      margin-bottom: 24px;
+    }
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .sub-heading {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: var(--primary-blue);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .main-heading {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .sub-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .product-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      display: grid;
+      grid-template-columns: 52px 1fr auto;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+    .product-card.featured {
+      border: 2px solid #38bdf8;
+      background: linear-gradient(180deg, #ffffff, #f0f9ff);
+    }
+    .ribbon-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #0284c7;
+      color: #ffffff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-bottom-left-radius: 8px;
+      text-transform: uppercase;
+    }
+    .ribbon-badge.event-badge {
+      background: #e11d48;
+    }
+
+    .product-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--primary-blue);
+    }
+    .product-info h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 2px;
+    }
+    .product-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .price-row .price {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+    .price-row small {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .unit-badge {
+      font-size: 0.7rem;
+      background: #e2e8f0;
+      color: #475569;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+    }
+
+    /* Quantity Counter (+ / -) */
+    .quantity-controller {
+      display: flex;
+      align-items: center;
+      background: #f1f5f9;
+      border-radius: var(--radius-full);
+      padding: 4px;
+      border: 1px solid #cbd5e1;
+      user-select: none;
+    }
+    .qty-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: var(--text-dark);
+      font-size: 1rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      transition: all 0.15s;
+    }
+    .qty-btn:active {
+      background: var(--primary-blue);
+      color: #ffffff;
+      transform: scale(0.9);
+    }
+    .qty-input {
+      width: 38px;
+      text-align: center;
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 800;
+      border: none;
+      background: transparent;
+      color: var(--text-dark);
+      pointer-events: none;
+    }
+
+    /* Order Summary Box */
+    .order-summary-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 22px 18px;
+      border: 1px solid #bae6fd;
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+    }
+    .summary-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+    .summary-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #item-count-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: #dcfce7;
+      color: #15803d;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+    }
+
+    .selected-items-list {
+      min-height: 50px;
+      margin-bottom: 16px;
+    }
+    .empty-hint {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 14px;
+      background: #f8fafc;
+      border-radius: var(--radius-sm);
+      border: 1px dashed #cbd5e1;
+    }
+    .cart-item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      padding: 8px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .cart-item-row strong {
+      color: var(--primary-dark);
+    }
+
+    .price-breakdown {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      margin-bottom: 18px;
+    }
+    .price-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    .total-amount {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #16a34a;
+    }
+    .note-text {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .order-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .input-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 5px;
+    }
+    .input-group input,
+    .input-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid #cbd5e1;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      outline: none;
+      background: #ffffff;
+    }
+    .input-group input:focus,
+    .input-group select:focus {
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .btn-order-wa {
+      width: 100%;
+      background: linear-gradient(135deg, #25d366, #16a34a);
+      color: #ffffff;
+      font-size: 1.1rem;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 700;
+    }
+
+    /* Event Special Banner */
+    .event-banner-card {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 26px 20px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-lg);
+    }
+    .special-tag {
+      display: inline-block;
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+    }
+    .event-content h2 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+    .event-content p {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      margin-bottom: 16px;
+    }
+    .event-features {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .event-features span {
+      font-size: 0.82rem;
+      color: #93c5fd;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-event-wa {
+      background: #ffffff;
+      color: #0f172a;
+      width: 100%;
+      text-decoration: none;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+    }
+
+    /* Main Footer */
+    .main-footer {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+    .footer-brand h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+    .footer-brand p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .footer-details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+      background: #f8fafc;
+      padding: 14px;
+      border-radius: var(--radius-md);
+      margin-bottom: 18px;
+    }
+    .footer-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: #334155;
+    }
+    .footer-row i {
+      color: var(--primary-blue);
+      margin-top: 4px;
+    }
+    .footer-row a {
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .footer-bottom {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 14px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .footer-bottom .credit strong {
+      color: var(--primary-blue);
+    }
+
+    /* Floating Sticky Bar (Mobile Only) */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+      padding: 10px 16px;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 10px;
+      z-index: 999;
+    }
+    .sticky-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .sticky-btn.call-btn {
+      background: #f1f5f9;
+      color: var(--text-dark);
+      border: 1px solid #cbd5e1;
+    }
+    .sticky-btn.whatsapp-btn {
+      background: linear-gradient(135deg, #25d366, #16a34a);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+    }
+
+    @media (max-width: 480px) {
+      .product-card {
+        grid-template-columns: 46px 1fr;
+        gap: 10px;
+      }
+      .quantity-controller {
+        grid-column: span 2;
+        justify-content: center;
+        width: 100%;
+        margin-top: 6px;
+      }
+      .brand-name {
+        font-size: 1.45rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Sticky Action Bar (Mobile Bottom Bar) -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:+918604858581" class="sticky-btn call-btn" id="sticky-call">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call Now</span>
+    </a>
+    <a href="https://wa.me/918604858581?text=Hello%20Satish%20Bhaiya%2C%20mujhe%20Agrasen%20Water%20Supplier%20se%20paani%20order%20karna%20hai." target="_blank" class="sticky-btn whatsapp-btn" id="sticky-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>Order on WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Background Decorative Glows -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <!-- Main Container -->
+  <main class="page-wrapper">
+
+    <!-- Top Announcement Banner -->
+    <div class="promo-top-bar">
+      <span class="live-dot"></span>
+      <p>🚚 <strong>Chandauli Superfast Delivery:</strong> Shadi, Parties, Meetings & Bulk Events ke liye Pure Packaged Mineral Water Bottles Uplabdh!</p>
+    </div>
+
+    <!-- Header & Profile Card -->
+    <header class="profile-card">
+      <div class="profile-badge-row">
+        <span class="tag-badge verified-tag"><i class="fa-solid fa-circle-check"></i> 100% Genuine & Sealed</span>
+        <span class="tag-badge location-tag"><i class="fa-solid fa-location-dot"></i> Chandauli</span>
+      </div>
+
+      <div class="brand-avatar-container">
+        <div class="avatar-ring">
+          <div class="brand-avatar">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+        </div>
+        <span class="online-indicator" title="Taking Orders Now"></span>
+      </div>
+
+      <h1 class="brand-name">Agrasen Water Supplier</h1>
+      <p class="proprietor-title">
+        <i class="fa-solid fa-user-tie"></i> <strong>Satish Agrawal</strong> (Proprietor)
+      </p>
+
+      <p class="address-text">
+        <i class="fa-solid fa-map-pin"></i> Purani Bazar, Ward No. 3, Chandauli
+      </p>
+
+      <p class="brand-tagline">
+        Pure Packaged Mineral Water Bottles | 1L, 500ml & 250ml Wedding & Event Bulk Supply
+      </p>
+
+      <!-- Main Quick Action Buttons -->
+      <div class="action-grid">
+        <a href="tel:+918604858581" class="btn btn-call" id="btn-main-call">
+          <i class="fa-solid fa-phone-volume"></i>
+          <div>
+            <small>Direct Call</small>
+            <strong>8604858581</strong>
+          </div>
+        </a>
+
+        <a href="https://wa.me/918604858581?text=Hello%20Satish%20Ji%2C%20mujhe%20paani%20ke%20order%20ke%20liye%20baat%20karni%20hai." target="_blank" class="btn btn-whatsapp" id="btn-main-wa">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div>
+            <small>Direct Message</small>
+            <strong>WhatsApp Chat</strong>
+          </div>
+        </a>
+
+        <button onclick="shareAgencyPage()" class="btn btn-secondary" id="btn-share-page">
+          <i class="fa-solid fa-share-nodes"></i>
+          <span>Share Profile</span>
+        </button>
+
+        <button onclick="downloadContactVCard()" class="btn btn-secondary" id="btn-save-contact">
+          <i class="fa-solid fa-address-book"></i>
+          <span>Save Contact</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Trust USPs (Badges) -->
+    <section class="trust-grid">
+      <div class="trust-pill">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div>
+          <h4>100% Pure & Sealed</h4>
+          <p>Hygienic & Lab Tested</p>
+        </div>
+      </div>
+      <div class="trust-pill">
+        <i class="fa-solid fa-truck-fast"></i>
+        <div>
+          <h4>Doorstep Delivery</h4>
+          <p>Quick supply in Chandauli</p>
+        </div>
+      </div>
+      <div class="trust-pill">
+        <i class="fa-solid fa-snowflake"></i>
+        <div>
+          <h4>Chilled Available</h4>
+          <p>Cool & Normal as needed</p>
+        </div>
+      </div>
+      <div class="trust-pill">
+        <i class="fa-solid fa-tags"></i>
+        <div>
+          <h4>Wholesale Rates</h4>
+          <p>Special price for Events</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Products & WhatsApp Order Section -->
+    <section class="catalog-section" id="products">
+      <div class="section-title-wrap">
+        <span class="sub-heading">Hamare Products & Rate</span>
+        <h2 class="main-heading">Select Bottles & Order Directly</h2>
+        <p class="sub-text">Apna required bottle size select karein aur (+) dabakar quantity chunein. WhatsApp par 1-click mein order bhejein.</p>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- Product 1: 1 Litre Bottles Pack -->
+        <div class="product-card featured" data-id="p1">
+          <div class="ribbon-badge">Standard Pack</div>
+          <div class="product-icon-wrap">
+            <i class="fa-solid fa-wine-bottle"></i>
+          </div>
+          <div class="product-info">
+            <h3>1 Litre Bottle Pack (12 Pcs)</h3>
+            <p class="product-desc">Meetings, family trips, dhabas aur shops ke liye pure mineral water bottles ka 12-pack carton.</p>
+            <div class="price-row">
+              <span class="price">₹<span id="price-val-p1">240</span> <small>/ carton</small></span>
+              <span class="unit-badge">12 Bottles</span>
+            </div>
+          </div>
+          <div class="quantity-controller">
+            <button type="button" class="qty-btn" onclick="handleQtyChange('p1', -1)">−</button>
+            <input type="text" id="qty-p1" class="qty-input" value="0" readonly>
+            <button type="button" class="qty-btn" onclick="handleQtyChange('p1', 1)">+</button>
+          </div>
+        </div>
+
+        <!-- Product 2: 500ml Bottle Pack -->
+        <div class="product-card" data-id="p2">
+          <div class="product-icon-wrap">
+            <i class="fa-solid fa-glass-water"></i>
+          </div>
+          <div class="product-info">
+            <h3>500ml Mini Pack (24 Pcs)</h3>
+            <p class="product-desc">Conferences, guest hospitality aur restaurants ke liye handy size 500ml bottles ka 24-pack.</p>
+            <div class="price-row">
+              <span class="price">₹<span id="price-val-p2">280</span> <small>/ carton</small></span>
+              <span class="unit-badge">24 Bottles</span>
+            </div>
+          </div>
+          <div class="quantity-controller">
+            <button type="button" class="qty-btn" onclick="handleQtyChange('p2', -1)">−</button>
+            <input type="text" id="qty-p2" class="qty-input" value="0" readonly>
+            <button type="button" class="qty-btn" onclick="handleQtyChange('p2', 1)">+</button>
+          </div>
+        </div>
+
+        <!-- Product 3: 250ml Party & Wedding Pack -->
+        <div class="product-card featured" data-id="p3">
+          <div class="ribbon-badge event-badge">Shadi Special</div>
+          <div class="product-icon-wrap">
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </div>
+          <div class="product-info">
+            <h3>250ml Pocket Bottles (30 Pcs)</h3>
+            <p class="product-desc">Shadi, birthday party, catering & pooja functions ke liye zero-waste pocket bottles ka 30-pack.</p>
+            <div class="price-row">
+              <span class="price">₹<span id="price-val-p3">210</span> <small>/ carton</small></span>
+              <span class="unit-badge">30 Bottles</span>
+            </div>
+          </div>
+          <div class="quantity-controller">
+            <button type="button" class="qty-btn" onclick="handleQtyChange('p3', -1)">−</button>
+            <input type="text" id="qty-p3" class="qty-input" value="0" readonly>
+            <button type="button" class="qty-btn" onclick="handleQtyChange('p3', 1)">+</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live Order Calculator & WhatsApp Dispatch Box -->
+      <div class="order-summary-card" id="checkout-box">
+        <div class="summary-header">
+          <h3><i class="fa-solid fa-receipt"></i> Your Order Summary</h3>
+          <span id="item-count-badge">0 Cartons Selected</span>
+        </div>
+
+        <div class="selected-items-list" id="selected-items-container">
+          <p class="empty-hint"><i class="fa-solid fa-cart-arrow-down"></i> Upar diye gaye products me se <strong>(+)</strong> dabakar quantity chunein.</p>
+        </div>
+
+        <div class="price-breakdown">
+          <div class="price-line">
+            <span>Estimated Total:</span>
+            <span class="total-amount" id="total-price">₹0</span>
+          </div>
+          <p class="note-text"><i class="fa-solid fa-circle-info"></i> Fast doorstep delivery in Chandauli.</p>
+        </div>
+
+        <!-- Customer Delivery Details Form -->
+        <div class="order-inputs">
+          <div class="input-group">
+            <label for="cust-name"><i class="fa-solid fa-user"></i> Aapka Naam</label>
+            <input type="text" id="cust-name" placeholder="Apna naam likhein (e.g. Rahul Sharma)">
+          </div>
+
+          <div class="input-group">
+            <label for="cust-address"><i class="fa-solid fa-house"></i> Delivery Address in Chandauli</label>
+            <input type="text" id="cust-address" placeholder="Gali / Mohalla / Ward / Landmark">
+          </div>
+
+          <div class="input-group">
+            <label for="delivery-time"><i class="fa-solid fa-clock"></i> Delivery Kab Chahiye?</label>
+            <select id="delivery-time">
+              <option value="Turant (Urgent Delivery)">Turant (As soon as possible)</option>
+              <option value="Aaj Shaam Tak">Aaj Shaam Tak (Evening)</option>
+              <option value="Kal Subah (Morning)">Kal Subah (Morning)</option>
+              <option value="Event / Shadi Ki Date Ko">Shadi / Event Date (Advance Booking)</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn-order-wa" id="btn-submit-order" onclick="sendOrderWhatsApp()">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Order Now on WhatsApp</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- Special Wedding & Event Booking Banner -->
+    <section class="event-banner-card">
+      <div class="event-content">
+        <span class="special-tag">🎉 Shadi, Tilak & Event Special</span>
+        <h2>Shadi Ya Function Ke Liye Bulk Order?</h2>
+        <p>Badi party ya shadi me chilled mineral water bottles ke bulk requirement ke liye direct special wholesale rate aur venue par safe delivery payein.</p>
+        <div class="event-features">
+          <span><i class="fa-solid fa-check"></i> Chilled Storage Delivery</span>
+          <span><i class="fa-solid fa-check"></i> On-Time Venue Delivery</span>
+          <span><i class="fa-solid fa-check"></i> Heavy Wholesale Discount</span>
+        </div>
+        <a href="https://wa.me/918604858581?text=Namaste%20Satish%20Ji%2C%20mujhe%20Shadi%2FEvent%20ke%20liye%20bulk%20water%20bottles%20ki%20quotation%20aur%20rate%20chahiye." target="_blank" class="btn-event-wa">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Get Event Wholesale Quote</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Location & Contact Footer -->
+    <footer class="main-footer">
+      <div class="footer-brand">
+        <h3>Agrasen Water Supplier</h3>
+        <p>Aapke Sheher Chandauli Ka Vishwasniya Packaged Mineral Water Supplier.</p>
+      </div>
+
+      <div class="footer-details">
+        <div class="footer-row">
+          <i class="fa-solid fa-user"></i>
+          <span><strong>Owner:</strong> Satish Agrawal</span>
+        </div>
+        <div class="footer-row">
+          <i class="fa-solid fa-phone"></i>
+          <span><strong>Mobile:</strong> <a href="tel:+918604858581">+91 8604858581</a></span>
+        </div>
+        <div class="footer-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <span><strong>Address:</strong> Purani Bazar, Ward No. 3, Chandauli, Uttar Pradesh</span>
+        </div>
+        <div class="footer-row">
+          <i class="fa-solid fa-clock"></i>
+          <span><strong>Timings:</strong> 7:00 AM – 9:00 PM (All 7 Days Open)</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Agrasen Water Supplier. All rights reserved.</p>
+        <p class="credit">Website crafted with ❤️ by <strong>Rajnish Gupta</strong></p>
+        <div style="margin-top: 12px;">
+          <a href="/admin" id="footerAdminLink" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; color: #64748b; text-decoration: none; padding: 5px 14px; border-radius: 20px; background: #f1f5f9; border: 1px solid #cbd5e1; font-weight: 600; transition: all 0.2s;">
+            <i class="fa-solid fa-lock" style="color: #0284c7; font-size: 0.75rem;"></i>
+            <span>Owner Login</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    const WHATSAPP_NUMBER = "918604858581";
+
+    // Products Data (With Dynamic Price Hydration)
+    const productCatalog = {
+      p1: { name: "1L Bottle Pack (12 Pcs)", price: 240, qty: 0, unit: "carton" },
+      p2: { name: "500ml Mini Pack (24 Pcs)", price: 280, qty: 0, unit: "carton" },
+      p3: { name: "250ml Wedding Pack (30 Pcs)", price: 210, qty: 0, unit: "carton" }
+    };
+
+    // Load Live Dynamic Prices from Database / API
+    async function loadDynamicPricing() {
+      try {
+        const res = await fetch(window.location.origin + "/api/products");
+        if (res.ok) {
+          const data = await res.json();
+          const items = data.products || data;
+          for (const [id, prod] of Object.entries(items)) {
+            if (productCatalog[id] && prod.price) {
+              productCatalog[id].price = Number(prod.price);
+              const priceEl = document.getElementById("price-val-" + id);
+              if (priceEl) {
+                priceEl.textContent = prod.price;
+              }
+            }
+          }
+          renderCart();
+        }
+      } catch (e) {
+        // Fallback to default prices silently
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadDynamicPricing);
+
+    function handleQtyChange(pid, change) {
+      if (!productCatalog[pid]) return;
+
+      let current = productCatalog[pid].qty;
+      let updated = current + change;
+      if (updated < 0) updated = 0;
+
+      productCatalog[pid].qty = updated;
+
+      const input = document.getElementById("qty-" + pid);
+      if (input) {
+        input.value = updated;
+      }
+
+      renderCart();
+    }
+
+    function renderCart() {
+      const container = document.getElementById("selected-items-container");
+      const totalAmountEl = document.getElementById("total-price");
+      const countBadgeEl = document.getElementById("item-count-badge");
+
+      let total = 0;
+      let count = 0;
+      let html = "";
+
+      for (const [id, item] of Object.entries(productCatalog)) {
+        if (item.qty > 0) {
+          const subtotal = item.qty * item.price;
+          total += subtotal;
+          count += item.qty;
+
+          html += '<div class="cart-item-row">' +
+                    '<span>' + item.name + ' <strong>× ' + item.qty + '</strong></span>' +
+                    '<span>₹' + subtotal + '</span>' +
+                  '</div>';
+        }
+      }
+
+      if (count === 0) {
+        container.innerHTML = '<p class="empty-hint"><i class="fa-solid fa-cart-arrow-down"></i> Upar diye gaye products me se <strong>(+)</strong> dabakar quantity chunein.</p>';
+        countBadgeEl.textContent = "0 Cartons Selected";
+      } else {
+        container.innerHTML = html;
+        countBadgeEl.textContent = count + " Cartons Selected";
+      }
+
+      totalAmountEl.textContent = "₹" + total;
+    }
+
+    function sendOrderWhatsApp() {
+      let items = [];
+      let total = 0;
+
+      for (const [id, item] of Object.entries(productCatalog)) {
+        if (item.qty > 0) {
+          const subtotal = item.qty * item.price;
+          total += subtotal;
+          items.push("• *" + item.name + "* : " + item.qty + " " + item.unit + " (₹" + subtotal + ")");
+        }
+      }
+
+      if (items.length === 0) {
+        alert("Kripya pehle upar kisi product par (+) dabakar quantity chunein.");
+        document.getElementById("products").scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      const custName = document.getElementById("cust-name").value.trim() || "Customer";
+      const custAddress = document.getElementById("cust-address").value.trim() || "Chandauli (Purani Bazar)";
+      const deliveryTime = document.getElementById("delivery-time").value;
+
+      const message = 
+"📦 *NEW WATER ORDER - AGRASEN WATER SUPPLIER*\n" +
+"━━━━━━━━━━━━━━━━━━━━\n" +
+"👤 *Customer Name:* " + custName + "\n" +
+"📍 *Delivery Address:* " + custAddress + "\n" +
+"⏰ *Delivery Time:* " + deliveryTime + "\n" +
+"━━━━━━━━━━━━━━━━━━━━\n" +
+"🛒 *ORDER ITEMS:*\n" +
+items.join("\n") + "\n" +
+"━━━━━━━━━━━━━━━━━━━━\n" +
+"💰 *ESTIMATED TOTAL: ₹" + total + "*\n" +
+"🚚 *Location:* Chandauli (Purani Bazar, Ward No. 3)\n\n" +
+"_Kripya order confirm karke delivery bhej dijiye._";
+
+      const waUrl = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+      window.open(waUrl, "_blank");
+    }
+
+    function shareAgencyPage() {
+      if (navigator.share) {
+        navigator.share({
+          title: "Agrasen Water Supplier - Chandauli",
+          text: "Order Pure Packaged Mineral Water Bottles in Chandauli from Satish Agrawal (Agrasen Water Supplier).",
+          url: window.location.href
+        }).catch(function() {});
+      } else {
+        navigator.clipboard.writeText(window.location.href).then(function() {
+          alert("✅ Website Link Copied! Aap ise WhatsApp ya Instagram par share kar sakte hain.");
+        }).catch(function() {
+          alert("Website Link: " + window.location.href);
+        });
+      }
+    }
+
+    function downloadContactVCard() {
+      const vcard = 
+"BEGIN:VCARD\n" +
+"VERSION:3.0\n" +
+"FN:Satish Agrawal (Agrasen Water Supplier)\n" +
+"ORG:Agrasen Water Supplier Chandauli\n" +
+"TITLE:Proprietor & Packaged Mineral Water Distributor\n" +
+"TEL;TYPE=CELL,VOICE:+918604858581\n" +
+"ADR;TYPE=WORK:;;Purani Bazar, Ward No. 3;Chandauli;UP;;India\n" +
+"NOTE:Mineral Water Bottles 1L, 500ml, 250ml & Wedding Bulk Supply in Chandauli.\n" +
+"END:VCARD";
+
+      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Satish_Agrawal_Agrasen_Water.vcf";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>

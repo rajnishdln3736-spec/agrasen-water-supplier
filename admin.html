@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Portal | Agrasen Water Supplier</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent-green: #22c55e;
+      --accent-green-dark: #16a34a;
+      --accent-red: #ef4444;
+      --bg: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.88);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0f172a 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    .admin-wrapper {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    /* Brand Header */
+    .admin-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .brand-icon-wrap {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #38bdf8, #0284c7);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+      font-size: 1.8rem;
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.4);
+    }
+    .admin-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .admin-subtitle {
+      color: #93c5fd;
+      font-size: 0.95rem;
+    }
+
+    /* Glass Container */
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Login Form Styles */
+    .login-box {
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    .login-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .login-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .input-group {
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .input-group label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+    }
+    .input-field {
+      width: 100%;
+      background: #020617;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-sm);
+      padding: 13px 14px;
+      font-size: 0.95rem;
+      color: #ffffff;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .input-field:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25);
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+      transition: all 0.2s;
+      margin-top: 10px;
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(2, 132, 199, 0.6);
+    }
+
+    /* Dashboard Header Navigation */
+    .dashboard-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .admin-user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .admin-avatar {
+      width: 42px;
+      height: 42px;
+      background: rgba(56, 189, 248, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .admin-meta h4 {
+      font-size: 0.95rem;
+      color: #ffffff;
+    }
+    .admin-meta p {
+      font-size: 0.75rem;
+      color: #4ade80;
+    }
+
+    .nav-actions-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-nav-action {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-nav-action:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+    }
+    .btn-logout {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: rgba(239, 68, 68, 0.3);
+      color: #fca5a5;
+    }
+    .btn-logout:hover {
+      background: rgba(239, 68, 68, 0.3);
+      color: #ffffff;
+    }
+
+    /* Product Management Section */
+    .section-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .section-header-row h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-header-row h3 i {
+      color: #38bdf8;
+    }
+    .db-status-badge {
+      font-size: 0.75rem;
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      padding: 4px 10px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .product-list-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .admin-product-card {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.2s;
+    }
+    .admin-product-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .prod-details h4 {
+      font-size: 1.05rem;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .prod-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+    .prod-pack-badge {
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .prod-time {
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+
+    /* Price Box & Inline Editor */
+    .prod-pricing-action {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .current-price-badge {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #4ade80;
+      background: rgba(34, 197, 94, 0.1);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(74, 222, 128, 0.25);
+    }
+    .btn-edit-price {
+      background: rgba(2, 132, 199, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-edit-price:hover {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    /* Inline Edit Form */
+    .edit-price-form {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .price-input-wrap {
+      display: flex;
+      align-items: center;
+      background: #020617;
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      border-radius: var(--radius-sm);
+      padding: 4px 10px;
+    }
+    .price-input-wrap span {
+      color: #38bdf8;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-right: 4px;
+    }
+    .price-input-num {
+      width: 70px;
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      outline: none;
+    }
+    .btn-save-price {
+      background: linear-gradient(135deg, var(--accent-green), var(--accent-green-dark));
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s;
+    }
+    .btn-save-price:hover {
+      filter: brightness(1.1);
+    }
+    .btn-cancel-edit {
+      background: #334155;
+      color: #cbd5e1;
+      border: none;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-cancel-edit:hover {
+      background: #475569;
+      color: #ffffff;
+    }
+
+    /* Alerts and Toasts */
+    .alert-banner {
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+    }
+    .alert-error {
+      background: rgba(239, 68, 68, 0.18);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+    }
+    .alert-success {
+      background: rgba(34, 197, 94, 0.18);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: #86efac;
+    }
+
+    #toast-msg {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0284c7;
+      color: #ffffff;
+      padding: 12px 22px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      display: none;
+      z-index: 1000;
+      animation: slideUp 0.3s ease;
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .admin-product-card {
+        grid-template-columns: 1fr;
+      }
+      .prod-pricing-action {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="admin-wrapper">
+
+    <!-- Top Brand Header -->
+    <header class="admin-header">
+      <div class="brand-icon-wrap">
+        <i class="fa-solid fa-droplet"></i>
+      </div>
+      <h1 class="admin-title">Agrasen Water Supplier</h1>
+      <p class="admin-subtitle">Secure Admin Control Panel &amp; Pricing Management</p>
+    </header>
+
+    <!-- 1. LOGIN VIEW -->
+    <div class="glass-card login-box" id="loginView">
+      <h2 class="login-heading"><i class="fa-solid fa-lock" style="color: #38bdf8;"></i> Admin Sign In</h2>
+      <p class="login-desc">Enter your owner credentials to manage live product prices.</p>
+
+      <div class="alert-banner alert-error" id="loginErrorAlert">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span id="loginErrorText">Invalid username or password.</span>
+      </div>
+
+      <form id="loginForm" onsubmit="handleAdminLogin(event)">
+        <div class="input-group">
+          <label for="adminUsername"><i class="fa-solid fa-user"></i> Username / Email</label>
+          <input type="text" id="adminUsername" class="input-field" placeholder="admin@agrasenwater.com" required autocomplete="username">
+        </div>
+
+        <div class="input-group">
+          <label for="adminPassword"><i class="fa-solid fa-key"></i> Password</label>
+          <input type="password" id="adminPassword" class="input-field" placeholder="Enter password" required autocomplete="current-password">
+        </div>
+
+        <button type="submit" class="btn-submit" id="btnLoginSubmit">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          <span>Sign In to Dashboard</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- 2. DASHBOARD VIEW (Hidden until authenticated) -->
+    <div class="glass-card" id="dashboardView" style="display: none;">
+      
+      <!-- Dashboard Top Navigation -->
+      <div class="dashboard-nav">
+        <div class="admin-user-info">
+          <div class="admin-avatar">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <div class="admin-meta">
+            <h4>Satish Agrawal</h4>
+            <p><i class="fa-solid fa-circle-check"></i> Authenticated Admin</p>
+          </div>
+        </div>
+
+        <div class="nav-actions-group">
+          <a href="/" target="_blank" class="btn-nav-action" id="btnViewLiveSite">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>View Customer Site</span>
+          </a>
+          <button onclick="handleAdminLogout()" class="btn-nav-action btn-logout" id="btnLogout">
+            <i class="fa-solid fa-power-off"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Pricing Management Section -->
+      <div class="section-header-row">
+        <h3><i class="fa-solid fa-tags"></i> Product Price Management</h3>
+        <span class="db-status-badge"><i class="fa-solid fa-database"></i> Live Database Connected</span>
+      </div>
+
+      <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 20px;">
+        Click <strong>Edit Price</strong> to update any bottle rate. The updated price will immediately reflect on the live customer website and WhatsApp ordering calculator.
+      </p>
+
+      <!-- Dynamic Product List Container -->
+      <div class="product-list-container" id="adminProductsContainer">
+        <!-- Injected via JavaScript from Database -->
+        <p style="text-align: center; padding: 20px; color: #94a3b8;">Loading latest database pricing...</p>
+      </div>
+
+      <!-- Quick Hint -->
+      <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 14px 18px; border: 1px solid rgba(255,255,255,0.06); font-size: 0.82rem; color: #cbd5e1;">
+        <i class="fa-solid fa-circle-info" style="color: #38bdf8; margin-right: 6px;"></i>
+        <strong>Security Notice:</strong> All price modifications require active cryptographic session validation on the server.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="toast-msg">Price updated successfully!</div>
+
+  <script>
+    const API_BASE = window.location.origin;
+    let authToken = localStorage.getItem("agrasen_admin_token") || "";
+
+    // Check existing auth state on load
+    document.addEventListener("DOMContentLoaded", () => {
+      if (authToken) {
+        verifyAndLoadDashboard();
+      }
+    });
+
+    // Handle Admin Login
+    async function handleAdminLogin(event) {
+      event.preventDefault();
+      const userEl = document.getElementById("adminUsername");
+      const passEl = document.getElementById("adminPassword");
+      const btn = document.getElementById("btnLoginSubmit");
+      const errAlert = document.getElementById("loginErrorAlert");
+      const errText = document.getElementById("loginErrorText");
+
+      errAlert.style.display = "none";
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Authenticating...';
+
+      try {
+        const res = await fetch(`${API_BASE}/api/admin/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username: userEl.value.trim(),
+            password: passEl.value
+          })
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.success && data.token) {
+          authToken = data.token;
+          localStorage.setItem("agrasen_admin_token", authToken);
+          showToast("✅ Login successful!");
+          passEl.value = "";
+          showDashboard(data.products);
+        } else {
+          errText.textContent = data.error || "Invalid username or password.";
+          errAlert.style.display = "flex";
+        }
+      } catch (err) {
+        errText.textContent = "Server connection error. Please try again.";
+        errAlert.style.display = "flex";
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-arrow-right-to-bracket"></i> <span>Sign In to Dashboard</span>';
+      }
+    }
+
+    // Verify token and load products
+    async function verifyAndLoadDashboard() {
+      try {
+        const res = await fetch(`${API_BASE}/api/products`);
+        if (res.ok) {
+          const data = await res.json();
+          showDashboard(data.products || data);
+        }
+      } catch (err) {
+        console.error("Failed to load products:", err);
+      }
+    }
+
+    // Show Dashboard View
+    function showDashboard(productsList) {
+      document.getElementById("loginView").style.display = "none";
+      document.getElementById("dashboardView").style.display = "block";
+      renderAdminProducts(productsList);
+    }
+
+    // Render Product Cards
+    function renderAdminProducts(productsObj) {
+      const container = document.getElementById("adminProductsContainer");
+      if (!productsObj) return;
+
+      const entries = Array.isArray(productsObj) 
+        ? productsObj.map(p => [p.id, p]) 
+        : Object.entries(productsObj);
+
+      let html = "";
+
+      entries.forEach(([id, item]) => {
+        const updatedDate = item.updated_at 
+          ? new Date(item.updated_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', day: 'numeric', month: 'short' })
+          : "Standard Rate";
+
+        html += `
+          <div class="admin-product-card" id="card-${id}">
+            <div class="prod-details">
+              <h4>${item.name}</h4>
+              <div class="prod-meta">
+                <span class="prod-pack-badge">${item.pack_size || item.unit || "Carton"}</span>
+                <span class="prod-time"><i class="fa-regular fa-clock"></i> Updated: <span id="time-${id}">${updatedDate}</span></span>
+              </div>
+            </div>
+
+            <div class="prod-pricing-action">
+              <div class="current-price-badge" id="display-price-${id}">₹${item.price}</div>
+              
+              <button type="button" class="btn-edit-price" id="btn-edit-${id}" onclick="openPriceEditor('${id}', ${item.price})">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>Edit Price</span>
+              </button>
+
+              <div class="edit-price-form" id="editor-${id}">
+                <div class="price-input-wrap">
+                  <span>₹</span>
+                  <input type="number" id="input-${id}" class="price-input-num" min="1" step="1" value="${item.price}">
+                </div>
+                <button type="button" class="btn-save-price" onclick="saveNewPrice('${id}')">
+                  <i class="fa-solid fa-check"></i> Save
+                </button>
+                <button type="button" class="btn-cancel-edit" onclick="cancelPriceEdit('${id}')">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // Open Inline Editor
+    function openPriceEditor(id, currentPrice) {
+      document.getElementById(`display-price-${id}`).style.display = "none";
+      document.getElementById(`btn-edit-${id}`).style.display = "none";
+      const editor = document.getElementById(`editor-${id}`);
+      editor.style.display = "inline-flex";
+      const input = document.getElementById(`input-${id}`);
+      input.value = currentPrice;
+      input.focus();
+    }
+
+    // Cancel Inline Editor
+    function cancelPriceEdit(id) {
+      document.getElementById(`display-price-${id}`).style.display = "block";
+      document.getElementById(`btn-edit-${id}`).style.display = "inline-flex";
+      document.getElementById(`editor-${id}`).style.display = "none";
+    }
+
+    // Save Price to Database via PUT /api/admin/products/:id
+    async function saveNewPrice(id) {
+      const input = document.getElementById(`input-${id}`);
+      const newPrice = parseFloat(input.value);
+
+      // Validation
+      if (isNaN(newPrice) || newPrice <= 0) {
+        alert("Please enter a valid numeric price greater than 0.");
+        input.focus();
+        return;
+      }
+
+      const saveBtn = document.querySelector(`#editor-${id} .btn-save-price`);
+      saveBtn.disabled = true;
+      saveBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+
+      try {
+        const res = await fetch(`${API_BASE}/api/admin/products/${id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${authToken}`
+          },
+          body: JSON.stringify({ price: newPrice })
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          document.getElementById(`display-price-${id}`).textContent = `₹${data.product.price}`;
+          document.getElementById(`time-${id}`).textContent = new Date(data.product.updated_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', day: 'numeric', month: 'short' });
+          cancelPriceEdit(id);
+          showToast(`✅ ${data.product.name} price updated to ₹${data.product.price}!`);
+        } else if (res.status === 401) {
+          alert("Session expired. Please log in again.");
+          handleAdminLogout();
+        } else {
+          alert(data.error || "Failed to update price.");
+        }
+      } catch (err) {
+        alert("Failed to connect to server. Please try again.");
+      } finally {
+        saveBtn.disabled = false;
+        saveBtn.innerHTML = '<i class="fa-solid fa-check"></i> Save';
+      }
+    }
+
+    // Handle Admin Logout
+    async function handleAdminLogout() {
+      try {
+        await fetch(`${API_BASE}/api/admin/logout`, {
+          method: "POST",
+          headers: { "Authorization": `Bearer ${authToken}` }
+        });
+      } catch (e) {}
+
+      authToken = "";
+      localStorage.removeItem("agrasen_admin_token");
+      document.getElementById("dashboardView").style.display = "none";
+      document.getElementById("loginView").style.display = "block";
+      showToast("Signed out successfully.");
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById("toast-msg");
+      toast.textContent = text;
+      toast.style.display = "block";
+      setTimeout(() => {
+        toast.style.display = "none";
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
