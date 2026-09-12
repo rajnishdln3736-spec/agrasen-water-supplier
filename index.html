@@ -96,22 +96,23 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      background: linear-gradient(135deg, #e0f2fe, #f0fdf4);
-      border: 1px solid #bae6fd;
-      padding: 10px 14px;
+      background: linear-gradient(135deg, #ecfdf5, #e0f2fe);
+      border: 1px solid #a7f3d0;
+      padding: 11px 16px;
       border-radius: var(--radius-md);
       margin-bottom: 16px;
-      font-size: 0.85rem;
-      color: var(--text-dark);
+      font-size: 0.88rem;
+      color: #065f46;
+      font-weight: 600;
     }
     .live-dot {
       width: 10px;
       height: 10px;
-      background-color: #22c55e;
+      background-color: #059669;
       border-radius: 50%;
       display: inline-block;
       flex-shrink: 0;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+      box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.25);
       animation: pulseDot 2s infinite;
     }
     @keyframes pulseDot {
@@ -129,6 +130,23 @@
       border: 1px solid var(--border-light);
       position: relative;
       margin-bottom: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+    }
+
+    .bisleri-brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #008850;
+      color: #ffffff;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 12px rgba(0, 136, 80, 0.35);
     }
 
     .profile-badge-row {
@@ -136,41 +154,43 @@
       justify-content: center;
       gap: 8px;
       flex-wrap: wrap;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .tag-badge {
       font-size: 0.75rem;
-      font-weight: 600;
-      padding: 4px 10px;
+      font-weight: 700;
+      padding: 4px 12px;
       border-radius: var(--radius-full);
       display: inline-flex;
       align-items: center;
       gap: 5px;
     }
     .verified-tag {
-      background-color: #e0f2fe;
-      color: var(--primary-dark);
+      background-color: #d1fae5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
     }
     .location-tag {
       background-color: #fef3c7;
       color: #92400e;
+      border: 1px solid #fde68a;
     }
 
     .brand-avatar-container {
       position: relative;
       display: inline-block;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     .avatar-ring {
-      width: 90px;
-      height: 90px;
+      width: 96px;
+      height: 96px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-cyan), var(--primary-blue));
+      background: linear-gradient(135deg, #008850, #0284c7);
       padding: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.25);
+      box-shadow: 0 8px 24px rgba(0, 136, 80, 0.3);
     }
     .brand-avatar {
       width: 100%;
@@ -178,10 +198,20 @@
       background: #ffffff;
       border-radius: 50%;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 2.2rem;
-      color: var(--primary-blue);
+      font-size: 1.5rem;
+      color: #008850;
+      font-weight: 900;
+      font-family: var(--font-heading);
+    }
+    .brand-avatar small {
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #0284c7;
+      margin-top: -2px;
     }
     .online-indicator {
       position: absolute;
@@ -219,6 +249,246 @@
       padding: 8px 12px;
       border-radius: var(--radius-sm);
       margin-bottom: 22px;
+    }
+
+    /* Bisleri Brand Logo Header Box */
+    .bisleri-official-header {
+      background: linear-gradient(135deg, #006837 0%, #008850 50%, #0284c7 100%);
+      border-radius: var(--radius-md);
+      padding: 16px 14px;
+      color: #ffffff;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 18px rgba(0, 104, 55, 0.25);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .bisleri-official-header::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .bisleri-logo-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: -1px;
+      line-height: 1;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .bisleri-logo-sub {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #a7f3d0;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+    .bisleri-slogan-pill {
+      margin-top: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    /* Bisleri WhatsApp Status Showcase Card */
+    .status-showcase-card {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+      border: 2px solid #a7f3d0;
+      border-radius: var(--radius-lg);
+      padding: 18px 16px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(0, 136, 80, 0.08);
+      position: relative;
+    }
+    .status-showcase-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      border-bottom: 1px dashed #6ee7b7;
+      padding-bottom: 10px;
+    }
+    .status-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .status-pulse-ring {
+      width: 14px;
+      height: 14px;
+      background: #059669;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.2);
+      animation: pulseDot 2s infinite;
+    }
+    .status-title-wrap h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #065f46;
+      font-family: var(--font-heading);
+    }
+    .status-badge-verified {
+      font-size: 0.7rem;
+      background: #008850;
+      color: #ffffff;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+    .status-features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .status-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid #d1fae5;
+    }
+    .status-feature-item i {
+      color: #008850;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .status-feature-item span {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.25;
+    }
+    .status-tagline-bar {
+      text-align: center;
+      background: #008850;
+      color: #ffffff;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .btn-view-poster {
+      width: 100%;
+      background: #ffffff;
+      color: #008850;
+      border: 1.5px solid #008850;
+      padding: 10px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-view-poster:hover {
+      background: #008850;
+      color: #ffffff;
+    }
+
+    /* Poster Preview Modal */
+    .poster-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .poster-modal.active {
+      display: flex;
+    }
+    .poster-modal-content {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      max-width: 440px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      animation: zoomInModal 0.25s ease-out;
+      position: relative;
+    }
+    @keyframes zoomInModal {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .poster-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: #008850;
+      color: #ffffff;
+    }
+    .poster-modal-header h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .close-modal-btn {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+    }
+    .poster-modal-body {
+      padding: 12px;
+      text-align: center;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .poster-modal-img {
+      width: 100%;
+      border-radius: var(--radius-md);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: block;
+    }
+    .poster-modal-actions {
+      padding: 12px 16px;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      gap: 10px;
     }
 
     /* Action Buttons Grid */
@@ -790,36 +1060,40 @@
     <!-- Top Announcement Banner -->
     <div class="promo-top-bar">
       <span class="live-dot"></span>
-      <p>🚚 <strong>Chandauli Superfast Delivery:</strong> Shadi, Parties, Meetings & Bulk Events ke liye Pure Packaged Mineral Water Bottles Uplabdh!</p>
+      <p>🚚 <strong>चन्दौली सुपरफास्ट डिलीवरी:</strong> 100% ओरिजिनल बिसलेरी (Bisleri) पानी की बोतलें शादी, पार्टी और इवेंट्स के लिए उपलब्ध!</p>
     </div>
 
     <!-- Header & Profile Card -->
     <header class="profile-card">
-      <div class="profile-badge-row">
-        <span class="tag-badge verified-tag"><i class="fa-solid fa-circle-check"></i> 100% Genuine & Sealed</span>
-        <span class="tag-badge location-tag"><i class="fa-solid fa-location-dot"></i> Chandauli</span>
+      
+      <!-- Official Bisleri Distributor Brand Badge -->
+      <div class="bisleri-official-header">
+        <div class="bisleri-logo-title">
+          <span>Bisleri</span>
+          <i class="fa-solid fa-water" style="font-size: 1.4rem; color: #6ee7b7;"></i>
+        </div>
+        <div class="bisleri-logo-sub">with added minerals • The Original Water</div>
+        <div class="bisleri-slogan-pill">
+          <i class="fa-solid fa-certificate"></i> AUTHORISED DISTRIBUTOR — CHANDAULI
+        </div>
       </div>
 
-      <div class="brand-avatar-container">
-        <div class="avatar-ring">
-          <div class="brand-avatar">
-            <i class="fa-solid fa-droplet"></i>
-          </div>
-        </div>
-        <span class="online-indicator" title="Taking Orders Now"></span>
+      <div class="profile-badge-row">
+        <span class="tag-badge verified-tag"><i class="fa-solid fa-circle-check"></i> 100% Sealed Original Bisleri</span>
+        <span class="tag-badge location-tag"><i class="fa-solid fa-location-dot"></i> Purani Bazar, Chandauli</span>
       </div>
 
       <h1 class="brand-name">Agrasen Water Supplier</h1>
       <p class="proprietor-title">
-        <i class="fa-solid fa-user-tie"></i> <strong>Satish Agrawal</strong> (Proprietor)
+        <i class="fa-solid fa-user-tie"></i> <strong>Satish Agrawal</strong> (Official Bisleri Partner)
       </p>
 
       <p class="address-text">
-        <i class="fa-solid fa-map-pin"></i> Purani Bazar, Ward No. 3, Chandauli
+        <i class="fa-solid fa-map-pin"></i> Purani Bazar, Ward No. 3, Chandauli (U.P.)
       </p>
 
-      <p class="brand-tagline">
-        Pure Packaged Mineral Water Bottles | 1L, 500ml & 250ml Wedding & Event Bulk Supply
+      <p class="brand-tagline" style="background: linear-gradient(135deg, #ecfdf5, #f0fdf4); border: 1px solid #a7f3d0; color: #065f46; font-weight: 700;">
+        💧 शुद्ध पानी बेहतर जीवन — "हर पानी हेल्दी पानी" (बिसलेरी भरोसे की पहचान)
       </p>
 
       <!-- Main Quick Action Buttons -->
@@ -832,7 +1106,7 @@
           </div>
         </a>
 
-        <a href="https://wa.me/918604858581?text=Hello%20Satish%20Ji%2C%20mujhe%20paani%20ke%20order%20ke%20liye%20baat%20karni%20hai." target="_blank" class="btn btn-whatsapp" id="btn-main-wa">
+        <a href="https://wa.me/918604858581?text=Hello%20Satish%20Ji%2C%20mujhe%20Bisleri%20water%20bottles%20order%20karna%20hai." target="_blank" class="btn btn-whatsapp" id="btn-main-wa">
           <i class="fa-brands fa-whatsapp"></i>
           <div>
             <small>Direct Message</small>
@@ -852,34 +1126,74 @@
       </div>
     </header>
 
-    <!-- Trust USPs (Badges) -->
+    <!-- Official Bisleri Quality & Status Guarantee Showcase -->
+    <section class="status-showcase-card">
+      <div class="status-showcase-header">
+        <div class="status-title-wrap">
+          <span class="status-pulse-ring"></span>
+          <h3>Bisleri Quality & Trust Promise</h3>
+        </div>
+        <span class="status-badge-verified"><i class="fa-solid fa-shield-check"></i> 100% PURE & SAFE</span>
+      </div>
+
+      <div class="status-features-grid">
+        <div class="status-feature-item">
+          <i class="fa-solid fa-droplet"></i>
+          <span>100% शुद्ध और सुरक्षित (Pure & Safe)</span>
+        </div>
+        <div class="status-feature-item">
+          <i class="fa-solid fa-dna"></i>
+          <span>प्राकृतिक मिनरल्स से भरपूर (Minerals)</span>
+        </div>
+        <div class="status-feature-item">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <span>बेहतर हाइड्रेशन (Better Hydration)</span>
+        </div>
+        <div class="status-feature-item">
+          <i class="fa-solid fa-users"></i>
+          <span>परिवार के लिए सुरक्षित (Family Safe)</span>
+        </div>
+      </div>
+
+      <div class="status-tagline-bar">
+        <i class="fa-solid fa-sparkles"></i>
+        <span>"हर घूंट में ताज़गी और सेहत" — Har Paani Healthy Paani</span>
+      </div>
+
+      <button type="button" class="btn-view-poster" onclick="openPosterModal()">
+        <i class="fa-solid fa-image"></i>
+        <span>View Official Bisleri Status Poster (स्टेटस पोस्टर देखें)</span>
+      </button>
+    </section>
+
+    <!-- Trust USPs (Badges matching the Poster) -->
     <section class="trust-grid">
-      <div class="trust-pill">
-        <i class="fa-solid fa-shield-halved"></i>
+      <div class="trust-pill" style="border-color: #a7f3d0;">
+        <i class="fa-solid fa-shield-halved" style="color: #008850;"></i>
         <div>
-          <h4>100% Pure & Sealed</h4>
-          <p>Hygienic & Lab Tested</p>
+          <h4>100% शुद्ध और सुरक्षित</h4>
+          <p>Sealed Original Bisleri</p>
         </div>
       </div>
-      <div class="trust-pill">
-        <i class="fa-solid fa-truck-fast"></i>
+      <div class="trust-pill" style="border-color: #a7f3d0;">
+        <i class="fa-solid fa-leaf" style="color: #008850;"></i>
         <div>
-          <h4>Doorstep Delivery</h4>
-          <p>Quick supply in Chandauli</p>
+          <h4>प्राकृतिक मिनरल्स</h4>
+          <p>With Added Minerals</p>
         </div>
       </div>
-      <div class="trust-pill">
-        <i class="fa-solid fa-snowflake"></i>
+      <div class="trust-pill" style="border-color: #a7f3d0;">
+        <i class="fa-solid fa-truck-fast" style="color: #0284c7;"></i>
         <div>
-          <h4>Chilled Available</h4>
-          <p>Cool & Normal as needed</p>
+          <h4>सुपरफास्ट डिलीवरी</h4>
+          <p>Doorstep in Chandauli</p>
         </div>
       </div>
-      <div class="trust-pill">
-        <i class="fa-solid fa-tags"></i>
+      <div class="trust-pill" style="border-color: #a7f3d0;">
+        <i class="fa-solid fa-tags" style="color: #008850;"></i>
         <div>
-          <h4>Wholesale Rates</h4>
-          <p>Special price for Events</p>
+          <h4>शादी/इवेंट स्पेशल</h4>
+          <p>Wholesale Bulk Rate</p>
         </div>
       </div>
     </section>
@@ -895,17 +1209,17 @@
       <div class="products-grid">
 
         <!-- Product 1: 1 Litre Bottles Pack -->
-        <div class="product-card featured" data-id="p1">
-          <div class="ribbon-badge">Standard Pack</div>
-          <div class="product-icon-wrap">
+        <div class="product-card featured" data-id="p1" style="border-color: #059669;">
+          <div class="ribbon-badge" style="background: #008850;">Bisleri Original</div>
+          <div class="product-icon-wrap" style="background: #d1fae5; color: #008850;">
             <i class="fa-solid fa-wine-bottle"></i>
           </div>
           <div class="product-info">
-            <h3>1 Litre Bottle Pack (12 Pcs)</h3>
-            <p class="product-desc">Meetings, family trips, dhabas aur shops ke liye pure mineral water bottles ka 12-pack carton.</p>
+            <h3>Bisleri 1 Litre Pack (12 Pcs)</h3>
+            <p class="product-desc">Original sealed Bisleri with added minerals. 12-bottle carton for meetings, family & shops.</p>
             <div class="price-row">
-              <span class="price">₹<span id="price-val-p1">240</span> <small>/ carton</small></span>
-              <span class="unit-badge">12 Bottles</span>
+              <span class="price" style="color: #008850;">₹<span id="price-val-p1">240</span> <small>/ carton</small></span>
+              <span class="unit-badge" style="background: #d1fae5; color: #065f46;">12 Bottles</span>
             </div>
           </div>
           <div class="quantity-controller">
@@ -917,14 +1231,14 @@
 
         <!-- Product 2: 500ml Bottle Pack -->
         <div class="product-card" data-id="p2">
-          <div class="product-icon-wrap">
+          <div class="product-icon-wrap" style="background: #e0f2fe; color: #0284c7;">
             <i class="fa-solid fa-glass-water"></i>
           </div>
           <div class="product-info">
-            <h3>500ml Mini Pack (24 Pcs)</h3>
-            <p class="product-desc">Conferences, guest hospitality aur restaurants ke liye handy size 500ml bottles ka 24-pack.</p>
+            <h3>Bisleri 500ml Mini Pack (24 Pcs)</h3>
+            <p class="product-desc">Conferences, guest hospitality aur restaurants ke liye handy size 500ml Bisleri ka 24-pack.</p>
             <div class="price-row">
-              <span class="price">₹<span id="price-val-p2">280</span> <small>/ carton</small></span>
+              <span class="price" style="color: #008850;">₹<span id="price-val-p2">280</span> <small>/ carton</small></span>
               <span class="unit-badge">24 Bottles</span>
             </div>
           </div>
@@ -936,17 +1250,17 @@
         </div>
 
         <!-- Product 3: 250ml Party & Wedding Pack -->
-        <div class="product-card featured" data-id="p3">
+        <div class="product-card featured" data-id="p3" style="border-color: #e11d48;">
           <div class="ribbon-badge event-badge">Shadi Special</div>
-          <div class="product-icon-wrap">
+          <div class="product-icon-wrap" style="background: #ffe4e6; color: #e11d48;">
             <i class="fa-solid fa-champagne-glasses"></i>
           </div>
           <div class="product-info">
-            <h3>250ml Pocket Bottles (30 Pcs)</h3>
+            <h3>Bisleri 250ml Pocket Bottles (30 Pcs)</h3>
             <p class="product-desc">Shadi, birthday party, catering & pooja functions ke liye zero-waste pocket bottles ka 30-pack.</p>
             <div class="price-row">
-              <span class="price">₹<span id="price-val-p3">210</span> <small>/ carton</small></span>
-              <span class="unit-badge">30 Bottles</span>
+              <span class="price" style="color: #008850;">₹<span id="price-val-p3">210</span> <small>/ carton</small></span>
+              <span class="unit-badge" style="background: #ffe4e6; color: #9f1239;">30 Bottles</span>
             </div>
           </div>
           <div class="quantity-controller">
@@ -1064,10 +1378,38 @@
       </div>
     </footer>
 
-  </main>
+  <!-- Official Status Poster Preview Modal -->
+  <div class="poster-modal" id="posterModal" onclick="closePosterModal(event)">
+    <div class="poster-modal-content" onclick="event.stopPropagation()">
+      <div class="poster-modal-header">
+        <h4><i class="fa-solid fa-certificate"></i> Bisleri Authorised Distributor Poster</h4>
+        <button class="close-modal-btn" onclick="closePosterModal()" title="Close">&times;</button>
+      </div>
+      <div class="poster-modal-body">
+        <img src="bisleri-poster.png" alt="Satish Agrawal Bisleri Official Poster Chandauli" class="poster-modal-img" onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80'">
+      </div>
+      <div class="poster-modal-actions">
+        <a href="https://wa.me/918604858581?text=Namaste%20Satish%20Ji%2C%20maine%20aapka%20Bisleri%20official%20poster%20dekha%2C%20mujhe%20water%20bottles%20order%20karna%20hai." target="_blank" class="btn btn-whatsapp" style="width: 100%; text-align: center;">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>WhatsApp Par Contact Karein</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script>
     const WHATSAPP_NUMBER = "918604858581";
+
+    // Modal Controls
+    function openPosterModal() {
+      const modal = document.getElementById("posterModal");
+      if (modal) modal.classList.add("active");
+    }
+
+    function closePosterModal(event) {
+      const modal = document.getElementById("posterModal");
+      if (modal) modal.classList.remove("active");
+    }
 
     // Products Data (With Dynamic Price Hydration)
     const productCatalog = {
