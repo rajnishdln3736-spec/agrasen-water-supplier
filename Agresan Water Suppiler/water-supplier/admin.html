@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Portal | Agrasen Water Supplier</title>
-  
+
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -56,6 +59,7 @@
       text-align: center;
       margin-bottom: 24px;
     }
+
     .brand-icon-wrap {
       width: 64px;
       height: 64px;
@@ -69,6 +73,7 @@
       color: #ffffff;
       box-shadow: 0 8px 24px rgba(2, 132, 199, 0.4);
     }
+
     .admin-title {
       font-family: 'Outfit', sans-serif;
       font-size: 1.8rem;
@@ -76,6 +81,7 @@
       color: #ffffff;
       margin-bottom: 4px;
     }
+
     .admin-subtitle {
       color: #93c5fd;
       font-size: 0.95rem;
@@ -96,6 +102,7 @@
       max-width: 440px;
       margin: 0 auto;
     }
+
     .login-heading {
       font-family: 'Outfit', sans-serif;
       font-size: 1.4rem;
@@ -103,6 +110,7 @@
       margin-bottom: 8px;
       text-align: center;
     }
+
     .login-desc {
       font-size: 0.85rem;
       color: var(--text-muted);
@@ -114,6 +122,7 @@
       margin-bottom: 16px;
       text-align: left;
     }
+
     .input-group label {
       display: block;
       font-size: 0.84rem;
@@ -121,6 +130,7 @@
       color: #cbd5e1;
       margin-bottom: 6px;
     }
+
     .input-field {
       width: 100%;
       background: #020617;
@@ -132,6 +142,7 @@
       outline: none;
       transition: all 0.2s;
     }
+
     .input-field:focus {
       border-color: var(--primary);
       box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25);
@@ -155,6 +166,7 @@
       transition: all 0.2s;
       margin-top: 10px;
     }
+
     .btn-submit:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 25px rgba(2, 132, 199, 0.6);
@@ -171,11 +183,13 @@
       margin-bottom: 24px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
+
     .admin-user-info {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+
     .admin-avatar {
       width: 42px;
       height: 42px;
@@ -188,10 +202,12 @@
       justify-content: center;
       font-size: 1.2rem;
     }
+
     .admin-meta h4 {
       font-size: 0.95rem;
       color: #ffffff;
     }
+
     .admin-meta p {
       font-size: 0.75rem;
       color: #4ade80;
@@ -202,6 +218,7 @@
       align-items: center;
       gap: 10px;
     }
+
     .btn-nav-action {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
@@ -217,15 +234,18 @@
       gap: 6px;
       transition: all 0.2s;
     }
+
     .btn-nav-action:hover {
       background: rgba(255, 255, 255, 0.15);
       color: #ffffff;
     }
+
     .btn-logout {
       background: rgba(239, 68, 68, 0.15);
       border-color: rgba(239, 68, 68, 0.3);
       color: #fca5a5;
     }
+
     .btn-logout:hover {
       background: rgba(239, 68, 68, 0.3);
       color: #ffffff;
@@ -238,6 +258,7 @@
       align-items: center;
       margin-bottom: 16px;
     }
+
     .section-header-row h3 {
       font-family: 'Outfit', sans-serif;
       font-size: 1.25rem;
@@ -246,9 +267,11 @@
       align-items: center;
       gap: 8px;
     }
+
     .section-header-row h3 i {
       color: #38bdf8;
     }
+
     .db-status-badge {
       font-size: 0.75rem;
       background: rgba(34, 197, 94, 0.15);
@@ -279,6 +302,7 @@
       gap: 16px;
       transition: all 0.2s;
     }
+
     .admin-product-card:hover {
       border-color: rgba(56, 189, 248, 0.4);
     }
@@ -288,6 +312,7 @@
       color: #ffffff;
       margin-bottom: 4px;
     }
+
     .prod-meta {
       display: flex;
       align-items: center;
@@ -296,6 +321,7 @@
       color: var(--text-muted);
       flex-wrap: wrap;
     }
+
     .prod-pack-badge {
       background: rgba(255, 255, 255, 0.08);
       color: #cbd5e1;
@@ -303,6 +329,7 @@
       border-radius: 6px;
       font-weight: 600;
     }
+
     .prod-time {
       font-size: 0.75rem;
       color: #64748b;
@@ -314,6 +341,7 @@
       align-items: center;
       gap: 12px;
     }
+
     .current-price-badge {
       font-family: 'Outfit', sans-serif;
       font-size: 1.35rem;
@@ -324,6 +352,7 @@
       border-radius: var(--radius-sm);
       border: 1px solid rgba(74, 222, 128, 0.25);
     }
+
     .btn-edit-price {
       background: rgba(2, 132, 199, 0.2);
       border: 1px solid rgba(56, 189, 248, 0.4);
@@ -338,6 +367,7 @@
       gap: 6px;
       transition: all 0.2s;
     }
+
     .btn-edit-price:hover {
       background: var(--primary);
       color: #ffffff;
@@ -350,6 +380,7 @@
       gap: 8px;
       flex-wrap: wrap;
     }
+
     .price-input-wrap {
       display: flex;
       align-items: center;
@@ -358,12 +389,14 @@
       border-radius: var(--radius-sm);
       padding: 4px 10px;
     }
+
     .price-input-wrap span {
       color: #38bdf8;
       font-weight: 700;
       font-size: 1rem;
       margin-right: 4px;
     }
+
     .price-input-num {
       width: 70px;
       background: transparent;
@@ -374,6 +407,7 @@
       font-weight: 800;
       outline: none;
     }
+
     .btn-save-price {
       background: linear-gradient(135deg, var(--accent-green), var(--accent-green-dark));
       color: #ffffff;
@@ -388,9 +422,11 @@
       gap: 4px;
       transition: all 0.15s;
     }
+
     .btn-save-price:hover {
       filter: brightness(1.1);
     }
+
     .btn-cancel-edit {
       background: #334155;
       color: #cbd5e1;
@@ -401,6 +437,7 @@
       font-weight: 600;
       cursor: pointer;
     }
+
     .btn-cancel-edit:hover {
       background: #475569;
       color: #ffffff;
@@ -416,11 +453,13 @@
       align-items: center;
       gap: 10px;
     }
+
     .alert-error {
       background: rgba(239, 68, 68, 0.18);
       border: 1px solid rgba(239, 68, 68, 0.4);
       color: #fca5a5;
     }
+
     .alert-success {
       background: rgba(34, 197, 94, 0.18);
       border: 1px solid rgba(34, 197, 94, 0.4);
@@ -437,20 +476,29 @@
       border-radius: var(--radius-sm);
       font-weight: 700;
       font-size: 0.9rem;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
       display: none;
       z-index: 1000;
       animation: slideUp 0.3s ease;
     }
+
     @keyframes slideUp {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 600px) {
       .admin-product-card {
         grid-template-columns: 1fr;
       }
+
       .prod-pricing-action {
         width: 100%;
         justify-content: space-between;
@@ -458,6 +506,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="admin-wrapper">
@@ -484,12 +533,14 @@
       <form id="loginForm" onsubmit="handleAdminLogin(event)">
         <div class="input-group">
           <label for="adminUsername"><i class="fa-solid fa-user"></i> Username / Email</label>
-          <input type="text" id="adminUsername" class="input-field" placeholder="satish123@gmail.com" required autocomplete="username">
+          <input type="text" id="adminUsername" class="input-field" placeholder="satish123@gmail.com" required
+            autocomplete="username">
         </div>
 
         <div class="input-group">
           <label for="adminPassword"><i class="fa-solid fa-key"></i> Password</label>
-          <input type="password" id="adminPassword" class="input-field" placeholder="Enter password" required autocomplete="current-password">
+          <input type="password" id="adminPassword" class="input-field" placeholder="Enter password" required
+            autocomplete="current-password">
         </div>
 
         <button type="submit" class="btn-submit" id="btnLoginSubmit">
@@ -501,7 +552,7 @@
 
     <!-- 2. DASHBOARD VIEW (Hidden until authenticated) -->
     <div class="glass-card" id="dashboardView" style="display: none;">
-      
+
       <!-- Dashboard Top Navigation -->
       <div class="dashboard-nav">
         <div class="admin-user-info">
@@ -533,7 +584,8 @@
       </div>
 
       <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 20px;">
-        Click <strong>Edit Price</strong> to update any bottle rate. The updated price will immediately reflect on the live customer website and WhatsApp ordering calculator.
+        Click <strong>Edit Price</strong> to update any bottle rate. The updated price will immediately reflect on the
+        live customer website and WhatsApp ordering calculator.
       </p>
 
       <!-- Dynamic Product List Container -->
@@ -543,9 +595,11 @@
       </div>
 
       <!-- Quick Hint -->
-      <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 14px 18px; border: 1px solid rgba(255,255,255,0.06); font-size: 0.82rem; color: #cbd5e1;">
+      <div
+        style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 14px 18px; border: 1px solid rgba(255,255,255,0.06); font-size: 0.82rem; color: #cbd5e1;">
         <i class="fa-solid fa-circle-info" style="color: #38bdf8; margin-right: 6px;"></i>
-        <strong>Security Notice:</strong> All price modifications require active cryptographic session validation on the server.
+        <strong>Security Notice:</strong> All price modifications require active cryptographic session validation on the
+        server.
       </div>
 
     </div>
@@ -555,7 +609,8 @@
   <div id="toast-msg">Price updated successfully!</div>
 
   <script>
-    const API_BASE = window.location.origin;
+    const API_BASE = "https://agrasen-water-supplier.rajnishdln3736.workers.dev";
+
     let authToken = localStorage.getItem("agrasen_admin_token") || "";
 
     // Check existing auth state on load
@@ -634,14 +689,14 @@
       const container = document.getElementById("adminProductsContainer");
       if (!productsObj) return;
 
-      const entries = Array.isArray(productsObj) 
-        ? productsObj.map(p => [p.id, p]) 
+      const entries = Array.isArray(productsObj)
+        ? productsObj.map(p => [p.id, p])
         : Object.entries(productsObj);
 
       let html = "";
 
       entries.forEach(([id, item]) => {
-        const updatedDate = item.updated_at 
+        const updatedDate = item.updated_at
           ? new Date(item.updated_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', day: 'numeric', month: 'short' })
           : "Standard Rate";
 
@@ -755,7 +810,7 @@
           method: "POST",
           headers: { "Authorization": `Bearer ${authToken}` }
         });
-      } catch (e) {}
+      } catch (e) { }
 
       authToken = "";
       localStorage.removeItem("agrasen_admin_token");
@@ -774,4 +829,5 @@
     }
   </script>
 </body>
+
 </html>
